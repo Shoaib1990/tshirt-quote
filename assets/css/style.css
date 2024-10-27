@@ -1,0 +1,30 @@
+/* Frontend form styling */
+form label {
+    font-weight: bold;
+}
+
+form input, form select {
+    margin-bottom: 10px;
+}
+
+/* Backend table styling */
+.wp-list-table th {
+    text-align: left;
+    background-color: #f1f1f1;
+}
+
+.wp-list-table td, .wp-list-table th {
+    padding: 10px;
+}
+
+.product_box {
+    height: 100px;
+    padding: 10px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.product_box img {
+    width: -webkit-fill-available;
+}
