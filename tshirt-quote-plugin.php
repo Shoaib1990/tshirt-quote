@@ -73,6 +73,9 @@ function ccqp_frontend_form() {
         $quantity = intval($_POST['ccqp_quantity']);
         $price = $quantity * 5;
 
+        $show_color = get_option('ccqp_show_color', '1');
+        $show_quantity = get_option('ccqp_show_quantity', '1');
+
         // Create a new post for the submission
         $post_id = wp_insert_post([
             'post_type' => 'ccqp_submission',
@@ -92,9 +95,10 @@ function ccqp_frontend_form() {
     ob_start();
     ?>
     <form method="post" action="">
-    <div class="product_box">
-                <img src="<?php echo plugin_dir_url(__FILE__) . 'assets/images/gray.jpg'; ?>" alt="T-shirt" />
-            </div>
+    <?php if ($show_color === '1'): ?>
+        <div class="product_box">
+            <img src="<?php echo plugin_dir_url(__FILE__) . 'assets/images/gray.jpg'; ?>" alt="T-shirt" />
+        </div>
         <label for="ccqp_color">Choose Color:</label>
         <select name="ccqp_color" id="ccqp_color">
         <option value="gray">Gray</option>
@@ -104,10 +108,12 @@ function ccqp_frontend_form() {
         </select>
         
         <br><br>
+        <?php endif; ?>
 
+        <?php if ($show_quantity === '1'): ?>
         <label for="ccqp_quantity">Quantity:</label>
         <input type="number" name="ccqp_quantity" id="ccqp_quantity" min="1" required>
-        
+        <?php endif; ?>
         <br><br>
 
         <!-- Display price dynamically -->
@@ -119,6 +125,6 @@ function ccqp_frontend_form() {
     </form>
     <?php
     return ob_get_clean();
-}
+        }
 
 add_shortcode('quote_form', 'ccqp_frontend_form');
