@@ -53,3 +53,7 @@ Submissions are available in the WordPress admin dashboard under "TShirt Quote >
 
 **1.0**
 * Initial release with basic color and quantity fields, with settings page.
+
+### Note:
+
+The primary goals are to implement form submission, add a custom domain, and enable or disable features within this plugin.
