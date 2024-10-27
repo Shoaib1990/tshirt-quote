@@ -1,7 +1,7 @@
 # TShirt Quote
 **Contributors:** Shoaib Khalid (Me)
 **Tags:** tshirt, quote, custom field, color selection, quantity, pricing
-Requires at least: 5.0
+**Video URL:** https://youtu.be/ChiEFrBR-o4
 
 A WordPress plugin that allows users to get a quote for t-shirts by selecting color and quantity, with dynamic pricing based on the quantity.
 
